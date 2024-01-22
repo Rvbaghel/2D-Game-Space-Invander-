@@ -1,0 +1,88 @@
+/* .rv{
+    width: 80px;
+    height: 60px;
+    background-color: red; 
+     display: flex; 
+    justify-content: center;
+     align-items: center; 
+    flex-direction: column;
+    margin-left: 1400px;
+    margin-top: 5px;
+} */
+.button{
+    width: 80px;
+    height: 30px;
+    border-radius: 3pc;
+    margin-left: 1450px;
+    margin-top: 5px;
+    font-size: 19px;
+    text-decoration: none;
+}
+.button:hover{
+    cursor: pointer;
+    background-color: aqua;
+    box-shadow: 0 12px 16px 0 #0378f4,0 17px 50px 0 rgba(241, 75, 4, 0.19);
+}
+.button2{
+    width: 80px;
+    height: 30px;
+    border-radius: 3pc;
+    margin-left: 1450px;
+    margin-top: 5px;
+    font-size: 19px;
+    text-decoration: none; 
+}
+.button2:hover{
+    cursor: not-allowed;
+    background-color: aqua;
+    box-shadow: 0 12px 16px 0 #0233f6,0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.Quit {
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    cursor: pointer;
+    justify-content: center;
+    align-content: center;
+    margin-top: 400px;
+    box-sizing: border-box;
+    padding: 10px;
+    display: none;
+    position: absolute;
+    z-index: 100;
+}
+
+.per {
+    width: 25px;
+    height: 20px;
+    border: 2px solid black;
+    margin: 2px;
+    padding: 3px;
+    border-radius: 5px;
+
+}
+
+#permission {
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 3px;
+}
+canvas{
+    
+    box-shadow: black 20px 10px 50px;
+}
+body{
+    background-image: url(picture/back.jpg);
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+
+}

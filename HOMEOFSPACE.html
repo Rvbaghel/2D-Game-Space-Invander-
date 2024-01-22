@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <style>
+         .RV {
+            color: aqua;
+        margin: 0px;
+        margin-bottom: 30px;
+        font-size: 2.9em;
+        font-family: "Helvetica";
+      }
+        body {
+            background-image: url(picture/back.jpg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .all {
+            width: 390px;
+            height: 439px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(picture/space.png);
+            /* background-repeat: no-repeat;*/
+            background-position-x: center;
+            background-position-y: center;
+            /* background-size:400px 440px;  */
+        }
+
+        .wrapper {
+            width: 400px;
+            height: 440px;
+            background: transparent;
+            /* background-image: url(picture/back.jpg); */
+            border: 2px solid rgba(255, 255, 255, .5);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* z-index: 50; */
+        }
+
+        .menu {
+            width: 170px;
+            height: 50px;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 19px;
+            box-shadow: 20px;
+            cursor: pointer;
+        }
+
+        .menu:hover {
+            background-color: #96adff;
+            box-shadow: 0 0 5px #96adff,
+                0 0 25px #96adff, 0 0 50px #96adff, 0 0 200px #96adff;
+        }
+
+        .Quit {
+            width: 300px;
+            height: 100px;
+            border: 1px solid black;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            border-radius: 3px;
+            cursor: pointer;
+            justify-content: center;
+            align-content: center;
+            margin-top: 400px;
+            box-sizing: border-box;
+            padding: 10px;
+            display: none;
+            position: absolute;
+            z-index: 100;
+        }
+
+        .per {
+            width: 25px;
+            height: 20px;
+            border: 2px solid black;
+            margin: 2px;
+            padding: 3px;
+            border-radius: 5px;
+
+        }
+
+        #permission {
+            display: flex;
+            flex-direction: row-reverse;
+            border-radius: 3px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .setting {
+            border: 3px solid black;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+           background-color: darkorchid;
+            margin-top: 200px;
+            display: none;
+            border-radius: 10px;
+            position: absolute;
+            z-index: 100;
+            background-image: url("game.jpg");
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: center;
+            background-size: 420px 400px;
+        }
+
+        
+        img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 9px;    
+        }
+
+        
+
+        #exit {
+            width: 40px;
+            height: 20px;
+            border: 2px solid black;
+            margin: 30px;
+            padding: 3px;
+            border-radius: 5px;
+            background-color: aqua;
+            cursor: pointer;
+        }
+
+        .controls {
+            box-shadow: -3px -3px 5px rgb(63, 63, 63), 3px 3px 5px black;
+            width: 200px;
+            height: 50px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            animation: mymove 5s infinite;
+            font-size: 30px;
+        }
+        @keyframes mymove {
+  25% {border: 10px solid lightblue;}
+}
+
+        .arrows {
+            display: flex;
+        }
+        
+        #emoji {
+            border-radius: 4PX;
+            border: 3px solid black;
+            background-color: palegreen;
+            width: 90px;
+            height: 30px;
+            margin: 10px;
+            padding: 3px;
+            font-size: 30PX;
+            justify-content: center;
+            align-items: center;
+        }
+
+        label {
+            margin-top: 40px;
+            border: 2px solid black;
+            border-radius :10px;
+            text-decoration: none;
+            background-color: blue;
+            font-size: 30px;
+        }
+        audio {
+            width: 30px;
+            height: 20px;
+            margin-left: 450px;
+            background-color: brown;
+        }
+           </style>
+</head>
+
+<body>
+           
+    
+    
+    <h1 class="RV">Space Invaders</h1>
+    <!-- SET THE ALL POSSITION -->
+    <div class="all">
+        <div class="wrapper">
+            <button class="menu"><a href="MODE.html">SELECT MODE</a></button>
+            <button class="menu" onclick="set()" onclick="document.getElementById('cl1').play()">CONTROLPLAY</button>
+            <button class="menu" onclick="show()" onclick="document.getElementById('cl1').play()">EXIT</button>
+        </div>
+    </div>
+    <!-- EXIT LOGIC -->
+    <div class=" Quit">
+        Do you want really Quit ?
+        <div id="permission">
+            <div class="per" id="yes" onclick="empty()"><a href=" hello.html"> Yes</a></div>
+            <div class="per" id="no" onclick="no()"> No</div>
+        </div>
+    </div>
+
+    <!-- CONTRAOLPANELDISPLAY -->
+
+    <div class="setting">
+        <center><img src="picture/control.avif"> </img></center>
+        <div>
+            <label>CONTROLS PRESS KEY</label>
+            <div class="arrows">
+                <button class="controls">SPACE</button>
+                <p id="emoji">&#x2191;</p>
+            </div>
+            <div class="arrows">
+                <button class="controls">RIGHT</button>
+                <p id="emoji">&#x2190;</p>
+            </div>
+            <div class="arrows">
+                <button class="controls">LEFT</button>
+                <p id="emoji">&#x2192;</p>
+            </div>
+            
+        </div>
+        
+        <div id="exit" onclick="e()">Exit</div>
+        <audio controls autoplay loop><source src="SS/BACK.mp3" type="audio/mp3">
+        </audio>
+        <audio  autoplay  id="cl1"><source src="SS/CL.wav" type="audio/wav">
+        </audio>
+        <audio  autoplay  id="cl2"><source src="SS/CL.wav" type="audio/wav">
+        </audio>
+
+    </div>
+
+    <!-- <a href="New_space.html" alt="hello"> go to play</a> -->
+</body>
+
+<script>
+
+    const perm1 = document.querySelector(".Quit");
+    const sett = document.querySelector(".setting");
+    let show = function () {
+        perm1.style.display = 'block';
+    }
+
+    let set = function () {
+        sett.style.display = 'block';
+    }
+    let no = function () {
+        perm1.style.display = 'none';
+    }
+
+    let e = function () {
+        sett.style.display = 'none';
+    }
+</script>
+
+</html>
